@@ -10,6 +10,7 @@ import assets from "../images/assets.png";
 import frame from "../images/frame.png";
 import Vector from "../images/Vector.png";
 import Inservice from "../images/Inservice.png";
+import graph from "../images/graph.png";
 import { Heading } from "@chakra-ui/react";
 import LineChart from "./LineChart";
 
@@ -22,7 +23,7 @@ const Vajra = () => {
 			padding={"3%"}
 		>
 			<Flex
-				border={"1px solid blue"}
+			boxShadow={" 4px 4px 8px -2px rgba(0, 79, 149, 0.25)"}
 				height={"56px"}
 				width={"100%"}
 				display="flex"
@@ -37,7 +38,7 @@ const Vajra = () => {
 					</InputLeftElement>
 					<Input
 						type="tel"
-						placeholder="Phone number"
+						
 						
 						width={"837px"}
 						height={"36px"}
@@ -48,14 +49,14 @@ const Vajra = () => {
 				<Button bg={'#F78117'} color={"white"}>Sign Up</Button>
 			</Flex>
 			<Box
-				border={"1px solid blue"}
+			boxShadow={" 4px 4px 8px -2px rgba(0, 79, 149, 0.25)"}
 				width={"100%"}
-				height={"575px"}
+				height={"680px"}
 				marginTop={"2%"}
         p={'2%'}
 
 			>
-				<Heading color={"#004F95"}>Total Incidents Recorded</Heading>
+				<Heading color={"#004F95"} >Total Incidents Recorded</Heading>
 				<Box display="flex"  mt={"2%"} justifyContent={"space-between"} width={"100%"} >
 					<Box
 						display="flex"
@@ -84,9 +85,13 @@ const Vajra = () => {
 					{" "}
 					<LineChart />
 				</Box>
+        <Flex ml={'20%'} gap="2%">
+          <Text>   X-Axis:weeks</Text>
+          <Text>Y-Axis:incidents</Text>
+        </Flex>
 			</Box>
 			<Box
-				border={"1px solid blue"}
+		
 				display={"flex"}
 				height={"400px"}
 				padding={"2px"}
@@ -107,8 +112,8 @@ const Vajra = () => {
 				<Image src={mangement} width={"330px"}
 					height={"350px"}/>
 			</Box>
-			<Box border={"1px solid blue"} display={"flex"} gap={"3%"}>
-				<Box border={"1px solid blue"} width={"30%"} height={"550px"} padding={"2%"}>
+			<Box  display={"flex"} gap={"3%"}>
+				<Box boxShadow={" 4px 4px 8px -2px rgba(0, 79, 149, 0.25)"} width={"30%"} height={"550px"} padding={"2%"}>
 					<Heading color={"blue"} textAlign={"center"}>
 						Departments
 					</Heading>
@@ -177,15 +182,16 @@ const Vajra = () => {
 					
 				</Box>
 				<Box
-					border={"1px solid blue"}
+				
 					width={"70%"}
 					height={"550px"}
 					color={"blue"}
 				>
-					<Heading> Total Downtime</Heading>
+					
+          <Image src={graph} h={"100%"}/>
 				</Box>
 			</Box>
-			<Box border={"1px solid blue"} width={"100%"} height={"380px"} display={"flex"} color={"#004F95"}  gap={'3%'} mt={'4%'}>
+			<Box boxShadow={" 4px 4px 8px -2px rgba(0, 79, 149, 0.25)"} width={"100%"} height={"380px"} display={"flex"} color={"#004F95"}  gap={'3%'} mt={'4%'}>
 				<Box  color={"#004F95"} padding={"2%"}boxShadow={'0px 4px 8px rgba(0, 79, 149, 0.25);'}>
 					<Heading textAlign={"center"} mt={'2%'}>Calibrated</Heading>
 					<Text mt={'5%'}>Calibrated</Text>
@@ -216,6 +222,13 @@ const Vajra = () => {
           <Image src={Vector} mt={'15%'} h={'150px'} w={"150px"}/>
         </Flex>
 			</Box>
+      <Box>
+        <Box></Box>
+        <Box></Box>
+        <Box></Box>
+        <Box></Box>
+        <Box></Box>
+      </Box>
 		</Box>
 	);
 };
